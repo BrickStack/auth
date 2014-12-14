@@ -1,0 +1,29 @@
+#account-form-container {
+    width: 560px;
+    margin: 100px auto;
+
+}
+
+.form-actions {
+    padding: 0 15px 0 0;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.refresh {
+    font-size: 18px;
+    padding: 4px 0 0 0;
+    width: 18px;
+    color: darkseagreen;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transition-timing-function: linear;
+}
