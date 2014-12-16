@@ -1,0 +1,27 @@
+.cloud-page-header {
+    height: 70px;
+    border-right: 1px solid #e2e2e2;
+    background-color: #e2e2e2;
+}
+
+.header-logo {
+    background-image: url('../images/product_logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 70px;
+}
+
+.header-nav {
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header-account {
+    float: right;
+    line-height: 70px;
+}

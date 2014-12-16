@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+<div id="account-form-container" ng-controller="signinCtrl">
+    <form class="form-horizontal well" name="signinForm">
+        <h3>Signin</h3>
+        <hr>
+        <fieldset>
+            <div class="form-group form-group-sm">
+                <lable class="control-label col-md-3">Username:</lable>
+                <div class="col-md-9">
+                    <input name="username" type="text" class="form-control input-lg" required ng-model="username.value"
+                           placeholder="用户名或邮箱地址">
+                    <span class="error"
+                          ng-show="submitted && signinForm.username.$dirty && signinForm.username.$invalid">
+                        <small class="error" ng-show="signinForm.username.$error.required">请填写您的用户名</small>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <lable class="control-label col-md-3">Password:</lable>
+                <div class="col-md-9">
+                    <input name="password" type="password" class="form-control input-lg" required
+                           ng-model="password.value" ng-maxlength="18" ng-minlength="6" placeholder="密码">
+                    <span class="error" ng-show="signinForm.password.$dirty && signinForm.password.$invalid">
+                        <small class="error" ng-show="signinForm.password.$error.required">请填写您的登录密码</small>
+                        <small class="error" ng-show="signinForm.password.$error.minlength">密码未达到最小长度6</small>
+                        <small class="error" ng-show="signinForm.password.$error.maxlength">密码超过最大允许长度18</small>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group form-group-sm" ng-if="alert.msg != ''">
+                <alert type="{{alert.type}}" close="closeAlert()">
+                    <i class="fa fa-lg fa-fw" ng-class="alert.iconClass"></i>
+                    {{alert.msg}} <span ng-if="alert.type === 'success'">{{gotoSeconed}}秒...</span>
+                </alert>
+            </div>
+            <div class="form-group form-group-sm">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="button" class="btn" ng-click="cancel()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" ng-click="signin(signinForm)">Signin
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-ui-utils/ui-utils.min.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="./controllers/signin.js"></script>
+</body>
+</html>

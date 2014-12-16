@@ -27,3 +27,27 @@
     -webkit-animation-iteration-count: infinite;
     -webkit-transition-timing-function: linear;
 }
+
+small.error {
+    color: red;
+}
+
+input.ng-pristine {
+}
+
+input.ng-dirty.ng-valid {
+}
+
+input.ng-dirty.ng-invalid {
+    border: 1px solid Red;
+}
+
+.ng-dirty.ng-valid ~ span.error {
+    color: green;
+    display: inline;
+}
+
+.ng-dirty.ng-invalid ~ span.error {
+    color: red;
+    display: inline;
+}

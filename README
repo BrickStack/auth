@@ -1,0 +1,13 @@
+http://cassandra.apache.org/download/
+http://mongodb.github.io/
+
+sc.exe create MongoDB binPath= "\"C:\Program Files\mongodb\bin\mongod.exe\" --service --config=\"C:\Program Files\mongodb\mongod.cfg\"" DisplayName= "MongoDB Standard" start= "auto"
+
+mongodb
+mongo --port 27019
+db.users.find()
+db.users.insert({})
+db.users.remove({})
+db.users.update({})
+http://docs.mongodb.org/manual/tutorial/query-documents/
+
