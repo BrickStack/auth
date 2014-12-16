@@ -4,12 +4,12 @@
 var nodemailer = require('nodemailer');
 
 var smtpConfig = {
-    host: "smtpscn.huawei.com",
+    host: "xxx",
     port: 25,
-    domains: 'huawei.com',
-    authUser: "pmail_hpaas",
-    authPassword: "hang.001",
-    from: "paas-support@huawei.com"
+    domains: 'xxx',
+    authUser: "xxx",
+    authPassword: "xxx",
+    from: "xxx"
 };
 
 var smtpTransport = nodemailer.createTransport({
